@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.vite/
+.vercel/
+.env
+.env.*
+public/generated/
+scripts/
+docs/
+.tmp-audit/
+*.log
+api/
+middleware.ts
+vercel.json
+*.tsbuildinfo
