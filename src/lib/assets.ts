@@ -32,7 +32,12 @@ export function useAomAssets(): AssetState {
           return;
         }
 
-        const nextManifest = (await manifestResponse.json()) as AssetManifest;
+        const rawManifest = (await manifestResponse.json()) as AssetManifest;
+        const nextManifest: AssetManifest = {
+          ...rawManifest,
+          missing: rawManifest.missing ?? [],
+          warnings: rawManifest.warnings ?? [],
+        };
         const unitsResponse = await fetch(UNITS_URL, { cache: "no-store" });
         const nextUnits = unitsResponse.ok ? ((await unitsResponse.json()) as UnitRecord[]) : null;
 

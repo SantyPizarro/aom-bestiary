@@ -198,7 +198,7 @@ export function BestiaryScreen() {
               }}
             />
           </div>
-          {manifest?.warnings.length ? (
+          {manifest?.warnings?.length ? (
             <div className="warning-strip">
               Algunos recursos visuales no pudieron cargarse completamente.
             </div>

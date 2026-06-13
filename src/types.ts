@@ -201,8 +201,8 @@ export type AssetManifest = {
   uiAssets?: UiAssetSet;
   godIcons?: Record<string, string>;
   units: Record<string, Partial<UnitAssets> & { animations?: string[] }>;
-  missing: string[];
-  warnings: string[];
+  missing?: string[];
+  warnings?: string[];
 };
 
 export type AnimationState = {
